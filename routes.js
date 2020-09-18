@@ -1,12 +1,12 @@
 const express = require("express");
 const routes = express.Router();
 
-routes.get("/instrutores", (req, res) => {
-    return res.render("instrutores/index.html")
+routes.get("/", (req, res) => {
+    return res.render("index.html")
 });
 
 routes.get("/alunos", (req, res) => {
-    return res.render("alunos/alunos.html")
+    return res.render("alunos.html")
 });
 
 module.exports = routes;
