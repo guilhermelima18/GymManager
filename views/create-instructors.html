@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/create-instructors.css">
+
+    <title>Create Instructors - Gym Manager</title>
+</head>
+
+<body>
+    <form class="container" method="POST" action="/">
+        <div class="card-img"></div>
+        <div class="content">
+            <h1>Cadastro de Instrutores</h1>
+            <div class="item-content">
+                <h2>Avatar URL</h2>
+                <input type="url" name="avatar" id="img" placeholder="https://">
+            </div>
+            <div class="item-content">
+                <h2>Instrutor</h2>
+                <input type="text" name="name" id="name" placeholder="Nome do Instrutor">
+            </div>
+            <div class="item-content">
+                <h2>Data de Nascimento</h2>
+                <input type="date" name="date" id="date" min="21" max="50">
+            </div>
+            <div class="item-content">
+                <h2>Sexo</h2>
+                <input type="radio" name="genre" id="masc" value="M" checked>
+                <label for="masculino">Masculino</label>
+                <input type="radio" name="genre" id="fem" value="F">
+                <label for="feminino">Feminino</label>
+            </div>
+            <div class="item-content">
+                <h2>Modalidade</h2>
+                <select name="modality" id="modality">
+                    <option value="1">Musculação</option>
+                    <option value="2">Crossfit</option>
+                    <option value="3">Treinamento Funcional</option>
+                    <option value="4">Zumba</option>
+                </select>
+            </div>
+            <button type="submit">Cadastrar Instrutor</button>
+        </div>
+    </form>
+</body>
+
+</html>
