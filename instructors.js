@@ -1,3 +1,6 @@
+const fs = require("fs");
+const data = require("./data.json");
+
 exports.post = function (req, res) {
     const keys = Object.keys(req.body)
 
@@ -6,5 +9,16 @@ exports.post = function (req, res) {
             return res.send("Por favor, preencha todos os dados!")
         }
     }
-    return res.send(req.body)
+
+    req.body.date = Date.parse(req.body.date);
+    req.body.created_at = Date.now();
+    req.body.id = Number(data.instructors.length + 1);
+
+    data.instructors.push(req.body)
+
+    fs.writeFile("data.json", JSON.stringify(data, null, 2), (err) => {
+        if (err) return res.send("Escrita errada!")
+
+        return res.redirect("/");
+    })
 }
