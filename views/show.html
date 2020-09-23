@@ -17,33 +17,34 @@
 
     <div class="container">
         <div class="card-img">
-            <img src="https://source.unsplash.com/collection/3465564/500x500" 
+            <img src="{{instructor.avatar}}" 
             alt="Imagem Perfil"
-            style="width: 96%; background-position: center; opacity: 0.8;"
+            style="width: 100%; background-position: center; opacity: 0.9;"
             >
         </div>
         <div class="content">
             <h1>Detalhes</h1>
             <div class="item-content">
                 <h2>Instrutor</h2>
-                <p>Guilherme Lima</p>
+                <p>{{instructor.name}}</p>
             </div>
             <div class="item-content">
                 <h2>Idade</h2>
-                <p>25 anos</p>
+                <p>{{instructor.age}}</p>
             </div>
             <div class="item-content">
                 <h2>Sexo</h2>
-                <p>Masculino</p>
+                <p>{{"Masculino" if instructor.genre == "M" else "Feminino"}}</p>
             </div>
             <div class="item-content">
                 <h2>Modalidade</h2>
-                <span>Musculação</span>
-                <span>Crossfit</span>
+                {% for modality in instructor.modalitys %}
+                <span>{{modality}}</span>
+                {% endfor %}
             </div>
             <div class="item-content">
                 <h2>Matrícula</h2>
-                <p>22/02/2018</p>
+                <p>{{instructor.created_at}}</p>
             </div>
         </div>
     </div>

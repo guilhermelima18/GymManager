@@ -1,13 +1,12 @@
 {
-    "instructors": [
-        {
-            "id": 1,
-            "avatar": "https://avatars1.githubusercontent.com/u/60123147?s=460&u=40de475fddcfeca4220eba6ec78f0bb6d2c9b2a9&v=4",
-            "name": "Carlos",
-            "date": 434160000000,
-            "genre": "M",
-            "modality": "3",
-            "created_at": 1600817463181
-        }
-    ]
+  "instructors": [
+    {
+      "id": 1,
+      "avatar": "https://avatars1.githubusercontent.com/u/60123147?s=460&u=40de475fddcfeca4220eba6ec78f0bb6d2c9b2a9&v=4",
+      "name": "Guilherme Lima",
+      "date": 822441600000,
+      "genre": "M",
+      "created_at": 1600822477667
+    }
+  ]
 }

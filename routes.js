@@ -10,6 +10,8 @@ routes.get("/create-instructors", (req, res) => {
     return res.render("create-instructors.html")
 });
 
+routes.get("/instructors/:id", instructors.show)
+
 routes.post("/", instructors.post)
 
 routes.get("/members", (req, res) => {

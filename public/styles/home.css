@@ -52,7 +52,7 @@ header a.active {
 .container {
     background-color: #e7e0e05b;
     width: 70%;
-    height: 70vh;
+    height: 73vh;
     margin: 30px auto;
     display: flex;
     flex-direction: row;
@@ -78,9 +78,7 @@ header a.active {
 
 .card-img {
     width: 50%;
-    background: url("https://source.unsplash.com/collection/3465564/500x500") no-repeat;
-    background-position: center;
-    opacity: 0.8;
+    height: 100%;
 }
 
 .content {
