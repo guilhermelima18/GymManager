@@ -2,11 +2,30 @@
   "instructors": [
     {
       "id": 1,
-      "avatar": "https://avatars1.githubusercontent.com/u/60123147?s=460&u=40de475fddcfeca4220eba6ec78f0bb6d2c9b2a9&v=4",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/60123147?s=460&u=40de475fddcfeca4220eba6ec78f0bb6d2c9b2a9&v=4",
       "name": "Guilherme Lima",
-      "date": 822441600000,
-      "genre": "M",
-      "created_at": 1600822477667
+      "birth": 822441600000,
+      "gender": "M",
+      "services": "Musculação, Crossfit",
+      "created_at": 1601000614799
+    },
+    {
+      "id": 2,
+      "avatar_url": "https://avatars3.githubusercontent.com/u/62475313?s=460&u=366c7cef553b1fa8c14cabb63a8585b747d02a80&v=4",
+      "name": "Stacy",
+      "birth": 768355200000,
+      "gender": "F",
+      "services": "Treinamento Funcional, Zumba",
+      "created_at": 1601000736057
+    },
+    {
+      "id": 3,
+      "avatar_url": "https://avatars3.githubusercontent.com/u/45427495?s=460&u=d9f94d65f99caf7c1d230f5e335cfef5994d7feb&v=4",
+      "name": "Melqui",
+      "birth": 702432000000,
+      "gender": "M",
+      "services": "Crossfit",
+      "created_at": 1601002051819
     }
   ]
 }

@@ -1,25 +1,28 @@
-const fs = require("fs");
-const data = require("./data.json");
+const fs = require("fs")
+const data = require("./data.json")
+const {age} = require("./date")
 
+// Mostrar Instrutores
 exports.show = function (req, res) {
-    const {id} = req.params;
+    const {id} = req.params
+
     const foundInstructor = data.instructors.find(function(instructor) {
-        return instructor.id == id;
+        return instructor.id == id
     })
 
-    if (!foundInstructor) return res.send("Instrutor não encontrado!");
-
-    return res.render("show.html", {instructor: foundInstructor});
+    if (!foundInstructor) return res.send("Instrutor não encontrado!")
 
     const instructor = {
         ...foundInstructor,
-        age: "",
-        genrer: "",
-        modalitys: foundInstructor.modalitys.split(","),
-        created_at: "",
+        age: age(foundInstructor.birth),
+        services: foundInstructor.services.split(","),
+        created_at: new Intl.DateTimeFormat("pt-BR").format(foundInstructor.created_at),
     }
+
+    return res.render("show.html", {instructor: foundInstructor})
 }
 
+// Criar Instrutores
 exports.post = function (req, res) {
     const keys = Object.keys(req.body)
 
@@ -29,25 +32,27 @@ exports.post = function (req, res) {
         }
     }
 
-    let {avatar, name, date, genre, modalitys} = req.body;
+    let {avatar_url, name, birth, gender, services} = req.body
 
-    const id = Number(data.instructors.length + 1);
-    const created_at = Date.now();
-    date = Date.parse(date);
+    const id = Number(data.instructors.length + 1)
+    const created_at = Date.now()
+    birth = Date.parse(birth)
 
     data.instructors.push({
         id,
-        avatar,
+        avatar_url,
         name,
-        date,
-        genre,
-        modalitys,
-        created_at
+        birth,
+        gender,
+        services,
+        created_at,
     })
 
     fs.writeFile("data.json", JSON.stringify(data, null, 2), (err) => {
-        if (err) return res.send("Escrita errada!")
+        if (err) {
+            return res.send("Escrita errada!")
+        }
 
-        return res.redirect("/");
+        return res.redirect("/")
     })
 }

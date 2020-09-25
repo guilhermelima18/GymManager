@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/styles/instructors.css">
 
-    <title>Instructors - Gym Manager</title>
+    <title>Show Instructors - Gym Manager</title>
 </head>
 
 <body>
@@ -17,10 +17,8 @@
 
     <div class="container">
         <div class="card-img">
-            <img src="{{instructor.avatar}}" 
-            alt="Imagem Perfil"
-            style="width: 100%; background-position: center; opacity: 0.9;"
-            >
+            <img src="{{instructor.avatar_url}}" alt="Imagem Perfil"
+                style="width: 100%; background-position: center; opacity: 0.9;">
         </div>
         <div class="content">
             <h1>Detalhes</h1>
@@ -34,18 +32,19 @@
             </div>
             <div class="item-content">
                 <h2>Sexo</h2>
-                <p>{{"Masculino" if instructor.genre == "M" else "Feminino"}}</p>
+                <p>{{"Masculino" if instructor.gender == "M" else "Feminino"}}</p>
             </div>
             <div class="item-content">
                 <h2>Modalidade</h2>
-                {% for modality in instructor.modalitys %}
-                <span>{{modality}}</span>
-                {% endfor %}
+                <div>
+                    <p>{{instructor.services}}</p>
+                </div>
             </div>
             <div class="item-content">
                 <h2>Matrícula</h2>
                 <p>{{instructor.created_at}}</p>
             </div>
+            <a href="#">Editar</a>
         </div>
     </div>
 
