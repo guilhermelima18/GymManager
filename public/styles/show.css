@@ -49,17 +49,16 @@ header a.active {
     color: violet;
 }
 
-.container {
-    background-color: #e7e0e05b;
+.container-show {
+    background-color: rgba(228, 227, 217, 0.582);
     width: 70%;
-    height: 78vh;
+    height: 80vh;
     margin: 20px auto;
     display: flex;
     flex-direction: row;
-    border-radius: 5px;
+    justify-content: space-between;
     box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.4);
 
-    /* Animation */
     animation-name: up;
     animation-duration: 600ms;
     animation-timing-function: ease-in-out;
@@ -77,32 +76,29 @@ header a.active {
 }
 
 .card-img {
-    width: 55%;
-    height: 100%;
+    width: 50%;
 }
 
 .card-img img {
-    width: 100%;
+    width: 200px;
     height: 100%;
 }
 
-.content {
+.content-show {
     width: 50%;
-    display: flex;
-    flex-direction: column;
-    padding: 10px 40px;
+    height: 100%;
 }
 
-.content a {
+.content-show a {
     background-color: rgba(89, 0, 255, 0.959);
-    width: 100%;
+    width: 90%;
     height: 50px;
     font-size: 17px;
     border: 0;
     outline: none;
     color: white;
     border-radius: 5px;
-    margin-top: 10px;
+    margin: 10px auto;
     transition: 500ms;
     display: flex;
     align-items: center;
@@ -110,41 +106,25 @@ header a.active {
     text-decoration: none;
 }
 
-.content a:hover {
+.content-show a:hover {
     background-color: darkslateblue
 }
 
-.item-content {
-    height: 70px;
-    margin: 10px 0;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.288);
+.content-show h1 {
+    text-align: center;
 }
 
-.item-content:last-child {
-    border: none;
+.item-show {
+    width: 80%;
+    height: 60px;
+    margin: 20px auto;
 }
 
-.item-content h2 {
-    color: #777;
-    font-size: 14px;
-    line-height: 24px;
+.item-show h2 {
+    font-size: 20px;
 }
 
-.item-content p {
-    color: rgba(89, 0, 255, 0.959);
-    font-size: 18px;
+.item-show p {
     font-weight: bold;
-}
-
-.item-content span {
-    background-color: darkorchid;
-    width: 120px;
-    height: 40px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
-    margin-right: 10px;
-    border-radius: 12px;
-    color: #FFF;
+    color: rgba(89, 0, 255, 0.959);
 }

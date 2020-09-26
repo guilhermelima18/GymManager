@@ -19,7 +19,7 @@ exports.show = function (req, res) {
         created_at: new Intl.DateTimeFormat("pt-BR").format(foundInstructor.created_at),
     }
 
-    return res.render("show.html", {instructor: foundInstructor})
+    return res.render("show", {instructor: foundInstructor})
 }
 
 // Criar Instrutores

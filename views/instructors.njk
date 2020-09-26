@@ -1,15 +1,7 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/instructors.css">
-
-    <title>Instructors - Gym Manager</title>
-</head>
+{%extends "layout.njk"%}
 
 <body>
+    {%block content%}
     <header>
         <a href="/">Instrutores</a>
         <a href="/members">Alunos</a>
@@ -45,8 +37,10 @@
                 <h2>Matrícula</h2>
                 <p>22/02/2018</p>
             </div>
+            <a href="#">Editar</a>
         </div>
     </div>
+    {%endblock%}
 
     <script src="scripts/script.js"></script>
 </body>

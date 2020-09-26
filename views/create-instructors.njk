@@ -1,45 +1,37 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/instructors.css">
-    <link rel="stylesheet" href="styles/create-instructors.css">
-
-    <title>Create Instructors - Gym Manager</title>
-</head>
+{%extends "layout.njk"%}
 
 <body>
-    <form class="container" method="POST" action="/">
-        <div class="content">
+    {%block content%}
+    <form class="container-create" method="POST" action="/">
+        <div class="content-create">
             <h1>Cadastro de Instrutores</h1>
-            <div class="item-content">
+            <div class="item-create">
                 <h2>Avatar URL</h2>
                 <input type="url" name="avatar_url" id="img" placeholder="https://">
             </div>
-            <div class="item-content">
+            <div class="item-create">
                 <h2>Instrutor</h2>
                 <input type="text" name="name" id="name" placeholder="Nome do Instrutor">
             </div>
-            <div class="item-content">
+            <div class="item-create">
                 <h2>Data de Nascimento</h2>
                 <input type="date" name="birth" id="birth" min="21" max="50">
             </div>
-            <div class="item-content">
+            <div class="item-create">
                 <h2>Sexo</h2>
                 <input type="radio" name="gender" id="masc" value="M" checked>
                 <label for="masculino">Masculino</label>
                 <input type="radio" name="gender" id="fem" value="F">
                 <label for="feminino">Feminino</label>
             </div>
-            <div class="item-content">
+            <div class="item-create">
                 <h2>Modalidade</h2>
                 <input id="services" name="services" type="text" placeholder="Separe as modalidades por vírgula">
             </div>
             <button type="submit">Cadastrar Instrutor</button>
         </div>
     </form>
+    {%endblock%}
 </body>
 
 </html>

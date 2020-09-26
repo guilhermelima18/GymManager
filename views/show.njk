@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/instructors.css">
+    <link rel="stylesheet" href="/styles/show.css">
 
     <title>Show Instructors - Gym Manager</title>
-</head>
+</head>}
 
 <body>
     <header>
@@ -15,32 +15,32 @@
         <a href="/members">Alunos</a>
     </header>
 
-    <div class="container">
+    <div class="container-show">
         <div class="card-img">
             <img src="{{instructor.avatar_url}}" alt="Imagem Perfil"
                 style="width: 100%; background-position: center; opacity: 0.9;">
         </div>
-        <div class="content">
+        <div class="content-show">
             <h1>Detalhes</h1>
-            <div class="item-content">
+            <div class="item-show">
                 <h2>Instrutor</h2>
                 <p>{{instructor.name}}</p>
             </div>
-            <div class="item-content">
+            <div class="item-show">
                 <h2>Idade</h2>
                 <p>{{instructor.age}}</p>
             </div>
-            <div class="item-content">
+            <div class="item-show">
                 <h2>Sexo</h2>
                 <p>{{"Masculino" if instructor.gender == "M" else "Feminino"}}</p>
             </div>
-            <div class="item-content">
+            <div class="item-show">
                 <h2>Modalidade</h2>
                 <div>
                     <p>{{instructor.services}}</p>
                 </div>
             </div>
-            <div class="item-content">
+            <div class="item-show">
                 <h2>Matrícula</h2>
                 <p>{{instructor.created_at}}</p>
             </div>
