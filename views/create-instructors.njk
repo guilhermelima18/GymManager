@@ -1,37 +1,25 @@
 {%extends "layout.njk"%}
 
-<body>
-    {%block content%}
-    <form class="container-create" method="POST" action="/">
-        <div class="content-create">
+{%block title%}
+    <title>Cadastrar Instrutor - Gym Manager</title>
+{%endblock%}
+
+{%block content%}
+    <header>
+        <a href="/">Instrutores</a>
+        <a href="/members">Alunos</a>
+    </header>
+
+    <form class="container" method="POST" action="/">
+        <div class="card-img">
+            <img src="https://source.unsplash.com/collection/3465564/500x500" alt="Imagem Perfil" style="width: 96%; background-position: center; opacity: 0.8;">
+        </div>
+        <div class="content">
             <h1>Cadastro de Instrutores</h1>
-            <div class="item-create">
-                <h2>Avatar URL</h2>
-                <input type="url" name="avatar_url" id="img" placeholder="https://">
-            </div>
-            <div class="item-create">
-                <h2>Instrutor</h2>
-                <input type="text" name="name" id="name" placeholder="Nome do Instrutor">
-            </div>
-            <div class="item-create">
-                <h2>Data de Nascimento</h2>
-                <input type="date" name="birth" id="birth" min="21" max="50">
-            </div>
-            <div class="item-create">
-                <h2>Sexo</h2>
-                <input type="radio" name="gender" id="masc" value="M" checked>
-                <label for="masculino">Masculino</label>
-                <input type="radio" name="gender" id="fem" value="F">
-                <label for="feminino">Feminino</label>
-            </div>
-            <div class="item-create">
-                <h2>Modalidade</h2>
-                <input id="services" name="services" type="text" placeholder="Separe as modalidades por vírgula">
-            </div>
-            <button type="submit">Cadastrar Instrutor</button>
+            
+            {%include "fields.njk"%}
         </div>
     </form>
     {%endblock%}
-</body>
 
 </html>

@@ -1,44 +1,22 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+{%extends "layout.njk"%}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/edit.css">
+{%block title%}
+    <title>Editar Instrutor - Gym Manager</title>
+    {%endblock%}
 
-    <title>Edit Instructors - Gym Manager</title>
-</head>
+    {%block content%}
+        <form class="container" method="POST" action="/instructors?_method=PUT">
+            <div class="card-img">
+                <img src="https://source.unsplash.com/collection/3465564/500x500" alt="Imagem Perfil" style="width: 96%; background-position: center; opacity: 0.8;">
+            </div>
+            <div class="content">
+                <h1>Editar Instrutor</h1>
 
-<body>
-    <form class="container" method="POST" action="/">
-        <div class="content">
-            <h1>Cadastro de Instrutores</h1>
-            <div class="item-content">
-                <h2>Avatar URL</h2>
-                <input type="url" name="avatar_url" id="img" placeholder="https://">
-            </div>
-            <div class="item-content">
-                <h2>Instrutor</h2>
-                <input type="text" name="name" id="name" placeholder="Nome do Instrutor">
-            </div>
-            <div class="item-content">
-                <h2>Data de Nascimento</h2>
-                <input type="date" name="birth" id="birth" min="21" max="50">
-            </div>
-            <div class="item-content">
-                <h2>Sexo</h2>
-                <input type="radio" name="gender" id="masc" value="M" checked>
-                <label for="masculino">Masculino</label>
-                <input type="radio" name="gender" id="fem" value="F">
-                <label for="feminino">Feminino</label>
-            </div>
-            <div class="item-content">
-                <h2>Modalidade</h2>
-                <input id="services" name="services" type="text" placeholder="Separe as modalidades por vírgula">
-            </div>
-            <button type="submit">Salvar Instrutor</button>
-        </div>
-    </form>
-</body>
+                {%include "fields.njk"%}
 
-</html>
+                <input type="hidden" name="id" value={{instructor.id} }="}">
+            </div>
+        </form>
+        {%endblock%}
+
+    </html>
