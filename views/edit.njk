@@ -1,29 +1,50 @@
-{%extends "layout.njk"%}
-
-{%block title%}
-    <title>Editar Instrutor - Gym Manager</title>
-    {%endblock%}
-
-    {%block content%}
-        <div class="cards">
-            <form method="POST" action="/instructors?_method=PUT">
-                <div class="img">
-                    <img src="https://source.unsplash.com/collection/3465564/500x500" alt="Imagem Perfil">
-                </div>
-                <div class="content-main">
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/styles/pages.css">
+        <title>Editar Instrutores - Gym Manager</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="card-img">
+                <img src="https://source.unsplash.com/collection/3465564/500x500" alt="Imagem Perfil">
+            </div>
+            <div class="content">
+                <form method="POST" action="/instructors?_method=PUT">
                     <h1>Editar Instrutor</h1>
-
-                    {%include "fields.njk"%}
-
+                    <div class="item-content">
+                        <h2>Avatar URL</h2>
+                        <input type="url" name="avatar_url" id="img" placeholder="https://" value="{{instructor.avatar_url}}">
+                    </div>
+                    <div class="item-content">
+                        <h2>Instrutor</h2>
+                        <input type="text" name="name" id="name" placeholder="Nome do Instrutor" value="{{instructor.name}}">
+                    </div>
+                    <div class="item-content">
+                        <h2>Data de Nascimento</h2>
+                        <input type="date" name="birth" id="birth" min="21" max="50" value="{{instructor.birth}}">
+                    </div>
+                    <div class="item-content">
+                        <h2>Sexo</h2>
+                        <input type="radio" name="gender" id="masc" value="M" checked="checked" {%if instructor.gender == "M"%} {%endif%}>
+                        <label for="masculino">Masculino</label>
+                        <input type="radio" name="gender" id="fem" value="F" {%if instructor.gender == "F"%} checked="checked" {%endif%}>
+                        <label for="feminino">Feminino</label>
+                    </div>
+                    <div class="item-content">
+                        <h2>Modalidade</h2>
+                        <input id="services" name="services" type="text" placeholder="Separe as modalidades por vírgula" value="{{instructor.services}}">
+                    </div>
+                    <button type="submit">Salvar Instrutor</button>
                     <input type="hidden" name="id" value={{instructor.id}}>
-                </div>
-            </form>
-
-            <form class="cards-form" action="/instructors?_method=DELETE" method="POST">
-                <input type="hidden" name="id" value={{instructor.id}}>
-                <button type="submit">Deletar Instrutor</button>
-            </form>
+                </form>
+                <form class="cards-form" action="/instructors?_method=DELETE" method="POST">
+                    <input type="hidden" name="id" value={{instructor.id}}>
+                    <button type="submit">Deletar Instrutor</button>
+                </form>
+            </div>
         </div>
-        {%endblock%}
-
-    </html>
+    </body>
+</html>

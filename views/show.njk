@@ -1,10 +1,12 @@
-{%extends "layout.njk"%}
-
-{%block title%}
-    <title>Instrutor Cadastrado - Gym Manager</title>
-{%endblock%}
-
-{%block content%}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/pages.css">
+    <title>Instrutores - Gym Manager</title>
+</head>
+<body>
     <header>
         <a href="/">Instrutores</a>
         <a href="/members">Alunos</a>
@@ -22,7 +24,8 @@
             </div>
             <div class="item-content">
                 <h2>Idade</h2>
-                <p>{{instructor.age}}</p>
+                <p>{{instructor.age}}
+                    anos</p>
             </div>
             <div class="item-content">
                 <h2>Sexo</h2>
@@ -30,9 +33,7 @@
             </div>
             <div class="item-content">
                 <h2>Modalidade</h2>
-                <div>
-                    <p>{{instructor.services}}</p>
-                </div>
+                <p>{{instructor.services}}</p>
             </div>
             <div class="item-content">
                 <h2>Matrícula</h2>
@@ -41,6 +42,5 @@
             <a href="/instructors/{{instructor.id}}/edit">Editar</a>
         </div>
     </div>
-    {%endblock%}
-
+</body>
 </html>
