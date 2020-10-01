@@ -3,10 +3,10 @@
     {
       "id": "1",
       "avatar_url": "https://avatars1.githubusercontent.com/u/60123147?s=460&u=40de475fddcfeca4220eba6ec78f0bb6d2c9b2a9&v=4",
-      "name": "Guilherme Lima 9",
+      "name": "Guilherme Lima",
       "birth": 822441600000,
       "gender": "M",
-      "services": "Musculação, Crossfit",
+      "services": "Musculação",
       "created_at": 1601000614799
     },
     {
@@ -15,7 +15,7 @@
       "name": "Stacy",
       "birth": 799891200000,
       "gender": "F",
-      "services": "Treinamento Funcional, Crossfit",
+      "services": "Treinamento Funcional",
       "created_at": 1601000736057
     },
     {

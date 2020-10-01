@@ -101,7 +101,7 @@ exports.update = function (req, res) {
 
     fs.writeFile("data.json", JSON.stringify(data, null, 2), function (err) {
         if (err) return res.send("Escrita errada")
-
-        return res.redirect("/")
     })
+
+    return res.redirect(`/instructors/${id}`)
 }
