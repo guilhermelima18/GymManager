@@ -3,11 +3,20 @@
     {
       "id": "1",
       "avatar_url": "https://avatars1.githubusercontent.com/u/60123147?s=460&u=40de475fddcfeca4220eba6ec78f0bb6d2c9b2a9&v=4",
-      "name": "Guilherme Freitas de Lima",
+      "name": "Guilherme Lima",
       "birth": 822441600000,
       "gender": "M",
-      "services": "Musculação, Crossfit, Treinamento Funcional",
+      "services": "Musculação e Crossfit",
       "created_at": 1601519253666
+    },
+    {
+      "id": 2,
+      "avatar_url": "https://avatars2.githubusercontent.com/u/6643122?s=460&u=1e9e1f04b76fb5374e6a041f5e41dce83f3b5d92&v=4",
+      "name": "Mayk Brito",
+      "birth": 620006400000,
+      "gender": "M",
+      "services": "Crossfit",
+      "created_at": 1601600826473
     }
   ]
 }

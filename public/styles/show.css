@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+header {
+    background-color: #212025;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid black;
+}
+
+header a {
+    position: relative;
+    text-decoration: none;
+    width: 140px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+    padding: 5px;
+    transition: all 0.5s ease;
+}
+
+header a:hover {
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.2);
+}
+
+header a.active {
+    font-weight: bold;
+    color: violet;
+}
+
+.show-container {
+    background-color: #E5E5E5;
+    width: 80%;
+    height: 85vh;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 1px black;
+
+    /* Animation */
+    animation-name: up;
+    animation-duration: 600ms;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes up {
+    from {
+        opacity: 0;
+        transform: translateX(150px);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.show-card-img {
+    width: 50%;
+    height: 100%;
+}
+
+.show-card-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.show-content {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.show-content a {
+    background-color: #212025;
+    text-decoration: none;
+    width: 50%;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+    color: white;
+    border-radius: 5px;
+    transition: 400ms;
+}
+
+.show-content a:hover {
+    background-color: #212025ec;
+}
+
+.show-content .show-item-content {
+    width: 80%;
+    height: 65px;
+    margin: 10px auto;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.301);
+}

@@ -13,9 +13,11 @@
     </header>
 
     <div class="table-container">
+        <h1>Instrutores Cadastrados</h1>
         <table width="100%">
             <thead>
                 <tr>
+                    <th>Avatar</th>
                     <th>Instrutor</th>
                     <th>Idade</th>
                     <th>Modalidade</th>
@@ -24,13 +26,15 @@
             <tbody>
                 {%for instructor in instructors%}
                     <tr>
+                        <td><img src="{{instructor.avatar_url}}" alt=""></td>
                         <td>{{instructor.name}}</td>
-                        <td>24 anos</td>
+                        <td>{{instructor.age}}</td>
                         <td>{{instructor.services}}</td>
                     </tr>
                     {%endfor%}
                 </tbody>
             </table>
+            <a href="/create-instructors">Cadastrar Novo Instrutor</a>
         </div>
 </body>
 </html>
