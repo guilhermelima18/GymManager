@@ -14,22 +14,22 @@
 
     <div class="table-container">
         <h1>Instrutores Cadastrados</h1>
-        <table width="100%">
+        <table>
             <thead>
                 <tr>
                     <th>Avatar</th>
                     <th>Instrutor</th>
-                    <th>Idade</th>
                     <th>Modalidade</th>
+                    <th>Ação</th>
                 </tr>
             </thead>
             <tbody>
                 {%for instructor in instructors%}
                     <tr>
-                        <td><img src="{{instructor.avatar_url}}" alt=""></td>
+                        <td><img src="{{instructor.avatar_url}}" alt="Avatar"></td>
                         <td>{{instructor.name}}</td>
-                        <td>{{instructor.age}}</td>
                         <td>{{instructor.services}}</td>
+                        <td><a href="/instructors/{{instructor.id}}">Ver mais</a></td>
                     </tr>
                     {%endfor%}
                 </tbody>

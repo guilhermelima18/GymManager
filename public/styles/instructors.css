@@ -56,33 +56,6 @@ header a.active {
     height: 85vh;
     margin: 20px auto;
     display: flex;
-    flex-direction: row;
-    border-radius: 10px;
-    box-shadow: 1px 1px 10px 1px black;
-
-    /* Animation */
-    animation-name: up;
-    animation-duration: 600ms;
-    animation-timing-function: ease-in-out;
-}
-
-@keyframes up {
-    from {
-        opacity: 0;
-        transform: translateX(150px);
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-.table-container {
-    background-color: #E5E5E5;
-    width: 80%;
-    height: 85vh;
-    margin: 20px auto;
-    display: flex;
     flex-direction: column;
     border-radius: 10px;
     box-shadow: 1px 1px 10px 1px black;
@@ -127,25 +100,31 @@ header a.active {
 
 .table-container table {
     border-spacing: 0;
-    width: 70%;
+    width: 80%;
     height: auto;
     margin: 20px auto;
 }
 
 .table-container thead tr th {
-    border: 1px solid rgba(128, 128, 128, 0.5);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.5);
     height: 50px;
     width: 400px;
     padding: 10px;
 }
 
 .table-container tbody tr td {
-    border: 1px solid rgba(128, 128, 128, 0.5);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.5);
     padding: 10px;
     text-align: center;
 }
 
+.table-container tbody tr td a {
+    background-color: rgba(255, 0, 0, 0.747);
+    width: 100px;
+}
+
 .table-container tbody tr td img {
-    width: 50px;
-    border-radius: 50%;
+    width: 60px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 8px 2px black;
 }
