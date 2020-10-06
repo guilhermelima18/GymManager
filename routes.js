@@ -2,7 +2,11 @@ const express = require("express")
 const routes = express.Router()
 const instructors = require("./instructors")
 
-routes.get("/", instructors.index)
+routes.get("/", (req, res) => {
+    res.render("index")
+})
+
+routes.get("/instructors", instructors.index)
 
 routes.get("/create-instructors", (req, res) => {
     return res.render("create-instructors")

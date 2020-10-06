@@ -13,9 +13,9 @@ h1 {
 }
 
 header {
-    background-color: #212025;
+    background-color: #23234B;
     width: 100%;
-    height: 50px;
+    height: 60px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -27,7 +27,7 @@ header a {
     position: relative;
     text-decoration: none;
     width: 140px;
-    height: 50px;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,7 +51,7 @@ header a.active {
 .show-container {
     background-color: #E5E5E5;
     width: 80%;
-    height: 85vh;
+    height: 82vh;
     margin: 20px auto;
     display: flex;
     flex-direction: row;

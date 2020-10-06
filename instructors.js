@@ -37,7 +37,7 @@ exports.post = function (req, res) {
             return res.send("Escrita errada!")
         }
 
-        return res.redirect("/")
+        return res.redirect("/instructors")
     })
 }
 
@@ -125,5 +125,5 @@ exports.delete = function (req, res) {
         if (err) return res.send("Erro na escrita")
     })
 
-    return res.redirect("/")
+    return res.redirect("/instructors")
 }
