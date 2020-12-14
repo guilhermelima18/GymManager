@@ -6,17 +6,26 @@
       "name": "Guilherme Lima",
       "birth": 822441600000,
       "gender": "M",
-      "services": "Musculação",
+      "services": "Musculação e Funcional",
       "created_at": 1601519253666
     },
     {
       "id": 2,
       "avatar_url": "https://avatars2.githubusercontent.com/u/6643122?s=460&u=1e9e1f04b76fb5374e6a041f5e41dce83f3b5d92&v=4",
       "name": "Mayk Brito",
-      "birth": 620006400000,
+      "birth": 340416000000,
       "gender": "M",
       "services": "Crossfit",
-      "created_at": 1601600826473
+      "created_at": 1607904087568
+    },
+    {
+      "id": 3,
+      "avatar_url": "https://avatars1.githubusercontent.com/u/62475313?s=460&u=18bdcb1a498188a6bbc9ebf889b81990828eeaab&v=4",
+      "name": "Stacy",
+      "birth": 777340800000,
+      "gender": "F",
+      "services": "Funcional",
+      "created_at": 1607904191575
     }
   ]
 }

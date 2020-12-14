@@ -3,7 +3,7 @@ const data = require("./data.json")
 const { age, date } = require("./date")
 
 exports.index =  function (req, res) {
-    return res.render("instructors", {instructors: data.instructors})
+    return res.render("instructors/instructors", {instructors: data.instructors})
 }
 
 // Criar Instrutores
@@ -58,7 +58,7 @@ exports.show = function (req, res) {
         created_at: new Intl.DateTimeFormat('en-GB').format(foundInstructor.created_at),
     }
 
-    return res.render("show", { instructor })
+    return res.render("instructors/show", { instructor })
 }
 
 // Editar Instrutores
@@ -77,7 +77,7 @@ exports.edit = function (req, res) {
         birth: date(foundInstructor.birth)
     }
 
-    return res.render("edit", { instructor })
+    return res.render("instructors/edit", { instructor })
 }
 
 // Atualizar Instrutores
