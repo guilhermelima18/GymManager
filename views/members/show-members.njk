@@ -3,43 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/show-instructors.css">
+    <link rel="stylesheet" href="/styles/show-members.css">
     <link rel="stylesheet" href="/styles/all.css">
     <link rel="stylesheet" href="/styles/header.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css">
-    <title>Instrutores - Gym Manager</title>
+    <title>Alunos - Gym Manager</title>
 </head>
 <body>
     {% include "../layout/header.html" %}
 
     <div class="show-container">
         <div class="show-card-img">
-            <img src="{{instructor.avatar_url}}" alt="Imagem Perfil">
+            <img src="{{member.avatar_url}}" alt="Imagem Perfil">
         </div>
         <div class="show-content">
             <h1>Detalhes</h1>
             <div class="show-item-content">
-                <h2>Instrutor</h2>
-                <p>{{instructor.name}}</p>
+                <h2>Aluno</h2>
+                <p>{{member.name}}</p>
             </div>
             <div class="show-item-content">
                 <h2>Idade</h2>
-                <p>{{instructor.age}}
+                <p>{{member.age}}
                     anos</p>
             </div>
             <div class="show-item-content">
                 <h2>Sexo</h2>
-                <p>{{"Masculino" if instructor.gender == "M" else "Feminino"}}</p>
+                <p>{{"Masculino" if member.gender == "M" else "Feminino"}}</p>
             </div>
             <div class="show-item-content">
                 <h2>Modalidade</h2>
-                <p>{{instructor.services}}</p>
+                <p>{{member.services}}</p>
             </div>
             <div class="show-item-content">
                 <h2>Matrícula</h2>
-                <p>{{instructor.created_at}}</p>
+                <p>{{member.created_at}}</p>
             </div>
-            <a href="/instructors/{{instructor.id}}/edit">Editar</a>
+            <a href="/members/{{member.id}}/edit">Editar</a>
         </div>
     </div>
 

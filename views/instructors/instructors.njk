@@ -1,41 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/instructors.css">
-    <title>Instrutores - Gym Manager</title>
-</head>
-<body>
-    <header>
-        <a href="/">Home</a>
-        <a href="/instructors">Instrutores</a>
-        <a href="/members">Alunos</a>
-    </header>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/styles/instructors.css">
+        <link rel="stylesheet" href="/styles/all.css">
+        <link rel="stylesheet" href="/styles/header.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css">
+        <title>Instrutores - Gym Manager</title>
+    </head>
+    <body>
+        {% include "../layout/header.html" %}
 
-    <div class="table-container">
-        <h1>Instrutores Cadastrados</h1>
-        <table>
-            <thead>
-                <tr>
-                    <th>Avatar</th>
-                    <th>Instrutor</th>
-                    <th>Modalidade</th>
-                    <th>Ação</th>
-                </tr>
-            </thead>
-            <tbody>
-                {%for instructor in instructors%}
+        <div class="table-container">
+            <h1>Instrutores Cadastrados</h1>
+            <table>
+                <thead>
                     <tr>
-                        <td><img src="{{instructor.avatar_url}}" alt="Avatar"></td>
-                        <td>{{instructor.name}}</td>
-                        <td>{{instructor.services}}</td>
-                        <td><a href="/instructors/{{instructor.id}}">Ver mais</a></td>
+                        <th>Avatar</th>
+                        <th>Instrutor</th>
+                        <th>Modalidade</th>
+                        <th>Ação</th>
                     </tr>
-                    {%endfor%}
-                </tbody>
-            </table>
-            <a href="/create-instructors">Cadastrar Novo Instrutor</a>
-        </div>
-</body>
-</html>
+                </thead>
+                <tbody>
+                    {%for instructor in instructors%}
+                        <tr>
+                            <td><img src="{{instructor.avatar_url}}" alt="Avatar"></td>
+                            <td>{{instructor.name}}</td>
+                            <td>{{instructor.services}}</td>
+                            <td>
+                                <a href="/instructors/{{instructor.id}}">Ver mais</a>
+                            </td>
+                        </tr>
+                        {%endfor%}
+                    </tbody>
+                </table>
+                <a href="/create-instructors">Cadastrar Novo Instrutor</a>
+            </div>
+
+            <script src="../../scripts/script.js"></script>
+        </body>
+    </html>

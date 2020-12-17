@@ -3,7 +3,7 @@ h1 {
     margin-bottom: 10px;
 }
 
-.create-container {
+.show-container {
     background-color: #E5E5E5;
     width: 80%;
     height: 82vh;
@@ -30,52 +30,45 @@ h1 {
     }
 }
 
-.create-card-img {
+.show-card-img {
     width: 50%;
     height: 100%;
 }
 
-.create-card-img img {
+.show-card-img img {
     width: 100%;
     height: 100%;
     border-radius: 10px;
 }
 
-.create-content {
+.show-content {
     width: 50%;
     height: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.create-content button {
+.show-content a {
     background-color: #212025;
+    text-decoration: none;
     width: 50%;
     height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 10px auto;
-    border: 0;
-    outline: none;
     color: white;
     border-radius: 5px;
-    cursor: pointer;
     transition: 400ms;
 }
 
-.create-content button:hover {
+.show-content a:hover {
     background-color: #212025ec;
 }
 
-.create-content .create-item-content {
+.show-content .show-item-content {
     width: 80%;
-    height: 90px;
-    margin: 0 auto;
-}
-
-.create-content .create-item-content input[type=text], [type=date], [type=url] {
-    width: 100%;
-    height: 35px;
-    border: 0;
-    outline: none;
-    border-radius: 5px;
-    padding: 0 8px;
+    height: 65px;
+    margin: 10px auto;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.301);
 }

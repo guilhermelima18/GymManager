@@ -4,15 +4,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/styles/create-instructors.css">
+        <link rel="stylesheet" href="/styles/all.css">
+        <link rel="stylesheet" href="/styles/header.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css">
         <title>Cadastro de Instrutores - Gym Manager</title>
     </head>
 
     <body>
-        <header>
-            <a href="/">Home</a>
-            <a href="/instructors">Instrutores</a>
-            <a href="/members">Alunos</a>
-        </header>
+        {% include "../layout/header.html" %}
 
         <form class="create-container" method="POST" action="/">
             <div class="create-card-img">
@@ -47,5 +46,7 @@
                 <button type="submit">Salvar Instrutor</button>
             </div>
         </form>
+
+        <script src="../../scripts/script.js"></script>
     </body>
 </html>

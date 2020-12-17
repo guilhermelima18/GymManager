@@ -3,11 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/styles/edit-instructors.css">
+        <link rel="stylesheet" href="/styles/edit-members.css">
         <link rel="stylesheet" href="/styles/all.css">
         <link rel="stylesheet" href="/styles/header.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css">
-        <title>Editar Instrutores - Gym Manager</title>
+        <title>Editar Alunos - Gym Manager</title>
     </head>
     <body>
         {% include "../layout/header.html" %}
@@ -17,37 +17,37 @@
                 <img src="https://source.unsplash.com/collection/3465564/500x500" alt="Imagem Perfil">
             </div>
             <div class="edit-content">
-                <form method="POST" action="/instructors?_method=PUT">
+                <form method="POST" action="/members?_method=PUT">
                     <h1>Editar Instrutor</h1>
                     <div class="edit-item-content">
                         <h2>Avatar URL</h2>
-                        <input type="url" name="avatar_url" id="img" placeholder="https://" value="{{instructor.avatar_url}}">
+                        <input type="url" name="avatar_url" id="img" placeholder="https://" value="{{member.avatar_url}}">
                     </div>
                     <div class="edit-item-content">
                         <h2>Instrutor</h2>
-                        <input type="text" name="name" id="name" placeholder="Nome do Instrutor" value="{{instructor.name}}">
+                        <input type="text" name="name" id="name" placeholder="Nome do Instrutor" value="{{member.name}}">
                     </div>
                     <div class="edit-item-content">
                         <h2>Data de Nascimento</h2>
-                        <input type="date" name="birth" id="birth" min="21" max="50" value="{{instructor.birth}}">
+                        <input type="date" name="birth" id="birth" min="21" max="50" value="{{member.birth}}">
                     </div>
                     <div class="edit-item-content">
                         <h2>Sexo</h2>
-                        <input type="radio" name="gender" id="masc" value="M" checked="checked" {%if instructor.gender == "M"%} {%endif%}>
+                        <input type="radio" name="gender" id="masc" value="M" checked="checked" {%if member.gender == "M"%} {%endif%}>
                         <label for="masculino">Masculino</label>
-                        <input type="radio" name="gender" id="fem" value="F" {%if instructor.gender == "F"%} checked="checked" {%endif%}>
+                        <input type="radio" name="gender" id="fem" value="F" {%if member.gender == "F"%} checked="checked" {%endif%}>
                         <label for="feminino">Feminino</label>
                     </div>
                     <div class="edit-item-content">
                         <h2>Modalidade</h2>
-                        <input id="services" name="services" type="text" placeholder="Separe as modalidades por vírgula" value="{{instructor.services}}">
+                        <input id="services" name="services" type="text" placeholder="Separe as modalidades por vírgula" value="{{member.services}}">
                     </div>
-                    <button id="save" type="submit">Salvar Instrutor</button>
-                    <input type="hidden" name="id" value={{instructor.id}}>
+                    <button id="save" type="submit">Salvar Aluno</button>
+                    <input type="hidden" name="id" value={{member.id}}>
                 </form>
-                <form class="edit-card-form" action="/instructors?_method=DELETE" method="POST">
-                    <input type="hidden" name="id" value={{instructor.id}}>
-                    <button id="delete" type="submit">Deletar Instrutor</button>
+                <form class="edit-card-form" action="/members?_method=DELETE" method="POST">
+                    <input type="hidden" name="id" value={{member.id}}>
+                    <button id="delete" type="submit">Deletar Aluno</button>
                 </form>
             </div>
         </div>

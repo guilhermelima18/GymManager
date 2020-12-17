@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/styles/create-members.css">
+        <link rel="stylesheet" href="/styles/all.css">
+        <link rel="stylesheet" href="/styles/header.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css">
+        <title>Cadastro de Alunos - Gym Manager</title>
+    </head>
+
+    <body>
+        {% include "../layout/header.html" %}
+
+        <form class="create-container" method="POST" action="/">
+            <div class="create-card-img">
+                <img src="https://source.unsplash.com/collection/3465564/500x500" alt="Imagem Perfil">
+            </div>
+            <div class="create-content">
+                <h1>Cadastro de Alunos</h1>
+
+                <div class="create-item-content">
+                    <h2>Avatar URL</h2>
+                    <input type="url" name="avatar_url" id="img" placeholder="https://" value="{{member.avatar_url}}">
+                </div>
+                <div class="create-item-content">
+                    <h2>Aluno</h2>
+                    <input type="text" name="name" id="name" placeholder="Nome do Aluno" value="{{member.name}}">
+                </div>
+                <div class="create-item-content">
+                    <h2>Data de Nascimento</h2>
+                    <input type="date" name="birth" id="birth" min="21" max="50" value="{{member.birth}}">
+                </div>
+                <div class="create-item-content">
+                    <h2>Sexo</h2>
+                    <input type="radio" name="gender" id="masc" value="M" checked="checked" {%if member.gender == "M"%} {%endif%}>
+                    <label for="masculino">Masculino</label>
+                    <input type="radio" name="gender" id="fem" value="F" {%if member.gender == "F"%} checked="checked" {%endif%}>
+                    <label for="feminino">Feminino</label>
+                </div>
+                <div class="create-item-content">
+                    <h2>Tipo Sanguíneo</h2>
+                    <select name="blood" required>
+                        <option value="A+">Selecione o tipo sanguíneo</option>
+                        <option value="A+">A +</option>
+                        <option value="A-">A -</option>
+                        <option value="B+">B +</option>
+                        <option value="B-">B -</option>
+                        <option value="AB+">AB +</option>
+                        <option value="AB-">AB -</option>
+                        <option value="O+">O +</option>
+                        <option value="O-">O -</option>
+                    </select>
+                </div>
+                <div class="create-item-content">
+                    <h2>Peso (kg)</h2>
+                    <input type="number" name="weight" placeholder="ex: 90" required>
+                </div>
+                <div class="create-item-content">
+                    <h2>Altura (cm)</h2>
+                    <input type="number" name="height" placeholder="ex: 183" required>
+                </div>
+                <button type="submit">Salvar Aluno</button>
+            </div>
+        </form>
+
+        <script src="../../scripts/script.js"></script>
+    </body>
+</html>
